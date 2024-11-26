@@ -62,6 +62,60 @@ Table 3: Example for conversion of text to lowercase.
 
 ![image](https://github.com/user-attachments/assets/35f81646-90fd-4706-918f-bbf1579cbf51)
 
+#### Expand contractions
+
+The contractions are expanded to retain the meaning, particularly negative emotions (Table 4). Expanding contractions help during tokenization because each word is treated as a separate token where equal weightage is given for negative terms, especially ‘not’. Understanding the full form of words enhances the precision of the text’s analysis, which is crucial in sentiment analysis.
+
+Table 4: Example for before and after expanding contractions.
+
+![image](https://github.com/user-attachments/assets/f7489bc2-f652-497a-be00-ef1bbcf26421)
+
+
+#### Delete foreign language
+
+In this method, only English-language reviews are retained to remain consistent throughout (Table 5). NLP models are trained on specific language, so having it may confuse the performance of the models. A foreign language can add noise (errors or inaccuracies) to the data, enabling it more challenging to extract meaningful insights or patterns. Analyzing foreign text is expensive to compute. 
+
+Table 5: Example for removing foreign language.
+
+![image](https://github.com/user-attachments/assets/c7215f7f-ed37-4c3d-abce-381ef6024a94)
+
+
+#### Handling null values
+
+As these reviews are textual data, the missing information is removed as no other technique, such as imputation, can be performed (Table 6). While performing the models with null values, the efficiency of the models leads to errors.
+
+Table 6: Example for null values removal.
+
+![image](https://github.com/user-attachments/assets/d6dfb0b5-9571-4a38-9928-a4bb8696c562)
+
+
+#### Remove special characters
+
+Removing non-alphabetical characters, symbols, and whitespaces (e.g., comma, plus, colon, semicolon, apostrophe, hash, ampersand, quotes, and so on) is an important task as it may not contribute any meaning to the text (Table 7). With punctuation, the same words are treated as different entities. By removing it, the effectiveness of the memory can be increased.
+
+Table 7: Remove punctuations.
+
+![image](https://github.com/user-attachments/assets/95e81685-fa81-472c-9a72-d2fbe20cbe57)
+
+
+#### Stopword removal
+
+Before customization of stopwords: Stopwords are commonly used terms, such as articles and prepositions, that do not give meaning to the text (Table 8). Removing stopwords can reduce the size of the document, while still retaining the important words and meaning of the terms.
+
+Table 8: Example of how stopwords are before and after removal.
+
+![image](https://github.com/user-attachments/assets/d339e1cd-8a7c-4ac1-8068-9beee87903d0)
+
+After removing stopwords, the top 20 most commonly used terms are checked and plotted (Figure 9) to check the weightage of the top 20 words.
+
+Figure 9: Top 20 most frequently used terms.
+
+![image](https://github.com/user-attachments/assets/2ef5bab1-2466-4dda-bc3e-9b7c802185b0)
+
+
+
+
+
 
 
 
