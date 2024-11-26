@@ -106,11 +106,37 @@ Table 8: Example of how stopwords are before and after removal.
 
 ![image](https://github.com/user-attachments/assets/d339e1cd-8a7c-4ac1-8068-9beee87903d0)
 
-After removing stopwords, the top 20 most commonly used terms are checked and plotted (Figure 9) to check the weightage of the top 20 words.
+After removing stopwords, the top 20 most commonly used terms are checked and plotted (Figure 2) to check the weightage of the top 20 words.
 
-Figure 9: Top 20 most frequently used terms.
+Figure 2: Top 20 most frequently used terms.
 
 ![image](https://github.com/user-attachments/assets/2ef5bab1-2466-4dda-bc3e-9b7c802185b0)
+
+
+Customizing stopwords: As the dataset solely focuses on the Apple iPhone, it is not necessary to have terms like phone, iPhone, apple, and amazon as these are product names used in this work and did not contribute to sentiment analysis. Hence, the words are removed, and the top 20 is plotted (Figure 3).
+
+Figure 3: Top 20 most commonly used terms after customizing stopwords.
+
+![image](https://github.com/user-attachments/assets/6791c416-841f-406b-9fbe-7d11c50cd769)
+
+
+#### Lemmatization
+
+Lemmatization reduces the words to their base form, particularly for verbs and adverbs. Stemming is not used here since it has a limitation of over- or under-stemming (Table 9).
+
+Table 9: Example for before and after lemmatization.
+
+![image](https://github.com/user-attachments/assets/291fbc22-478a-4f78-9714-c2eb041f0e12)
+
+
+#### Tokenization
+
+Tokenization is used to tokenize each word separately in order to derive meaning from each term (Table 10).
+
+Table 10: Example for before and after tokenization.
+
+![image](https://github.com/user-attachments/assets/dc251718-6f63-430a-937d-6eb44a521d4c)
+
 
 
 
