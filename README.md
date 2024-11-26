@@ -339,6 +339,7 @@ From LSA topics 1-5, positive and negative terms are segregated in Table 11 and 
 Table 11: LSA for topics 1-5 with positive and negative terms.
 
 ![image](https://github.com/user-attachments/assets/b86c0f3c-e7ef-417c-9bbd-f618e5102da7)
+
 ![image](https://github.com/user-attachments/assets/d6e42da4-a8ba-432f-8285-66d5ad3f058f)
 
 Topic 1: Device satisfaction
