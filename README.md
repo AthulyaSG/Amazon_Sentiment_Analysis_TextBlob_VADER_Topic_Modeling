@@ -341,6 +341,39 @@ Table 11: LSA for topics 1-5 with positive and negative terms.
 ![image](https://github.com/user-attachments/assets/b86c0f3c-e7ef-417c-9bbd-f618e5102da7)
 ![image](https://github.com/user-attachments/assets/d6e42da4-a8ba-432f-8285-66d5ad3f058f)
 
+Topic 1: Device satisfaction
+Users employ positive terms, i.e., like and great, when discussing about device usage. However, there are also negative terms associated with concerns about purchasing a new device and about the screen.
+
+Topic 2: iPhone longevity
+Consumers express positive sentiments about the duration of device usage. In contrast, negative sentiments indicate potential concerns related to purchasing a new device. 
+
+Topic 3: Device esthetics and replacement
+Customers emote positive sentiments regarding the appearance and functionality of the devices. Nevertheless, negative sentiments are associated with the replacement of old iPhones with new ones.
+
+Topic 4: Apple iPhone brand
+In this topic, users are more positive about the brand, condition, and protectors of the device. However, negative sentiments are raised due to battery issues and scratches on the screen.
+
+Topic 5: Overall satisfaction
+Although customers are highlighting the positive aspects of the overall device experience, there are negative comments associated with considerations related to iPhone esthetics, battery, and possible replacement of new devices.
+
+On one hand, users are positive about iPhone device satisfaction, longevity, esthetics, and brand; on the other hand, negative reviews emerge regarding purchase, screen and battery problems, and replacement.
+
+
+#### Latent Dirichlet Allocation (LDA)
+
+The words associated with each topic are visualized using the Gensim library; an intertopic distance map is displayed using the pyLDAvis—an interactive chart—for visualization. The tokenized terms are used by converting to BOW representation. For effective topic modeling, hyperparameters are optimized, where the number of topics is set to 15, the random size state is 100, the chunksize is 1000, and the number of passes is 50. The top 30 most relevant terms in all tokenized terms for Topic 1 are given in Figure 13, where the term ‘work’ has more than 1500 occurrences. In Figure 13, on the left, each bubble denotes a topic. The bigger bubbles imply that the topics are more prominent. More number of topics lead to many overlaps and form small-sized bubbles grouped in a specific region (Figure 13).
+
+Figure 13: Topic 1: Top 30 most relevant terms related to positive context.
+
+![image](https://github.com/user-attachments/assets/d603540d-5e8b-495f-9fbb-de5bff7c6dbc)
+
+From Figure 13, the top 30 most relevant themes related to the positive context given in topics 1-5 are tabulated in Table 12.
+
+Table 12: Top 30 most relevant terms related to positive context in topics 1-5.
+
+![image](https://github.com/user-attachments/assets/d4a6dcd9-215d-478c-af35-20052df527de)
+![image](https://github.com/user-attachments/assets/dc2df18d-e6c0-4b9a-9785-4c4bedbfd720)
+
 
 
 
