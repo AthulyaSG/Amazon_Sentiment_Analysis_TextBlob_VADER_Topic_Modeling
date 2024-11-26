@@ -375,6 +375,49 @@ Table 12: Top 30 most relevant terms related to positive context in topics 1-5.
 ![image](https://github.com/user-attachments/assets/d4a6dcd9-215d-478c-af35-20052df527de)
 ![image](https://github.com/user-attachments/assets/dc2df18d-e6c0-4b9a-9785-4c4bedbfd720)
 
+Topic 1: Device operation
+Topic 1 focuses about how electronic devices work and perform. Users are exchanging opinions and considerations about a range of topics, including the screen, time, speaker, call, and overall usage. The words imply that the importance is on the features and performance of the devices.
+
+Topic 2: Battery management
+Topic 2 discusses the lifespan of batteries in electronic devices. Users exchange thoughts, ideas, and experiences about battery management such as charging and capacity. The phrases imply an emphasis on durability, quality, and maintenance.
+
+Topic 3: User experiences
+Topic 3 probably revolves around user experiences, product reviews, and opinions. People appear to exchange ideas, opinions, and assessments, voicing both positive and negative sentiments. Mostly, these terms imply communication about the functionality, satisfaction, and relationships with sellers of the product.
+
+Topic 4: Purchasing experiences
+Positive discussions about the overall shopping experience are the focus of Topic 4. Consumers express satisfaction with a range of factors, such as the recommendations, conditions, brand preference, and performance of the product. Positive attitudes, suggestions, and factors that support a satisfying shopping experience are implied by the terms.
+
+Topic 5: Overall user satisfaction
+Topic 5 is concerned with talking about great, love, happy, recommend, and worth with orders and products. Users discuss their satisfaction with iPhone's appearance (new and look), performance (work and life), and overall experience (perfect). The positive terms emphasize user satisfaction, clustering words based on purchase and usage.
+
+The top 30 most relevant terms in negative tokenized terms for Topic 1 are given in Figure 14 and Topics 1 to 5 in Table 13.
+
+Figure 14: Topic 1: Top 30 most relevant terms related to negative context.
+
+![image](https://github.com/user-attachments/assets/0bdf6199-8cde-4f22-8f61-312cdb7e18a1)
+
+Table 13: Top 30 most relevant terms related to the negative context in topics 1-5.
+
+![image](https://github.com/user-attachments/assets/b17533cc-25f9-4987-8807-72273cd10d9f)
+
+Topic 1: User engagement
+The topic revolves around user engagement, including actions like get, return, and try. There are discussions about user experience with iPhone (screen, speaker, and sound) and interactions with customer service.
+
+Topic 2: Purchasing experience
+Topic 2 focuses on the purchasing experience because of terms such as buy, purchase, order, and buying. Renew, refurbish, and great suggest topics related to product renewal and dissatisfaction with the product. Overall, the topic provides user sentiments during the purchasing, involving product condition and satisfaction.
+
+Topic 3: Battery performance
+Topic 3 elaborates on battery performance, due to the presence of terms battery, charge, life, capacity, charger, phone, device, and replace. Consumers share experiences, opinions, and concerns about the duration of battery life. So, the topic gives information regarding user’s experience with battery performance.
+
+Topic 4: User dissatisfaction
+Customers express sentiments of dissatisfaction using term like hate. The terms such as buy, new, old, upgrade, and refurbish indicate bad purchases, in turn indicating the devices they purchased are not new ones.
+
+Topic 5: Physical condition
+Here, the topic is selected based on the condition of how the consumers received their product, for example, scratch, screen, back, crack, visible, noticeable, and glass. The appearance of terms, namely battery, life, and health, suggests iPhone’s functionality and performance; hence, this topic provides insights into the physical condition and esthetics of iPhone.
+
+To conclude, positive sentiments are based on features, life, and quality and satisfaction, whereas negative sentiments are regarding concerns related to customer service interaction, product replacement, battery longevity, user dissatisfaction, and physical condition. Although most of the terms are identified correctly in positive and negative topics, terms such as replace and refurbish are given in positive terms and words like good and perfect are in negative aspects, proving that this is not a reliable method. In order to enhance further, coherence score and perplexity can be computed to get more meaningful insights about each topic.
+
+
 
 
 
