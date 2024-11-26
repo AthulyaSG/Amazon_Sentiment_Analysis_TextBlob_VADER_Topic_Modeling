@@ -296,6 +296,53 @@ The K-Nearest Neighbor (KNN) uses a single data point’s proximity to classify 
 Artificial neural networks, also called Multilayer Perceptron (MP) or neural networks, are a broad field, where perceptron is a model of a neuron that serves as the base for larger neural networks. They are basic computational units with weighted input signals and an activation function to produce an output signal. An activation function is a mapping from the summed weighted input to the output and determines the threshold for neuron activation and the strength of the output signal. The lowest layer, also known as the visible layer, receives input from the dataset. Hidden layers are considered deep due to their previously slow training times; however, in recent years, due to advancements, this layer can be trained fast within seconds. The output layer generates a value or vector of values that are in line with the specifications needed to solve the problem (Brownlee, 2022).
 
 
+## Results and Discussion
+
+In this section, the results of the hybrid approach of sentiment analysis are discussed.
+
+
+### Evaluating sentiment lexicon effectiveness
+
+This study aims to investigate the sentiment labeling of 21,966 unannotated Amazon iPhone reviews using a rule-based approach, TextBlob and VADER. The reviews are annotated as positive when the sentiment score is +1, negative when the sentiment score is -1, and neutral when the sentiment score is 0. Figure 11 shows the number of reviews assigned to each sentiment label.
+
+Figure 11: Number of instances of label for each sentiment.
+
+![image](https://github.com/user-attachments/assets/ef6477a8-c3a3-43ed-8212-64072a744507)
+
+After cleaning the data, in the Rating (21%) given on the Amazon website, negative values are ~4000 counts when compared with TextBlob (11%) and VADER (11.8%). The scores from TextBlob follow a standardized order in contrast to the Rating, resulting in over 14,000 positive sentiments, exceeding VADER. VADER looks at how strong and whether a term is positive or negative and gives a score to the words, where neutral values (12.2%) are higher when compared to the other two.
+
+
+### Performance analysis of lexicon-based approaches
+
+To find the performance of rule-based approaches, three sentiment labels (positive, negative, and neutral) are converted to binary (positive and negative). The performance matrices namely accuracy, precision, recall, and F1-score are evaluated, where TextBlob achieves the better results 76.5%, 79.93%, 89.2%, and 84.31%, respectively, when compared to VADER (66.51%, 74.53%, 80%, and 77.19%) (Figure 12).
+
+Figure 12: Performance of TextBlob and VADER.
+
+![image](https://github.com/user-attachments/assets/b7329653-9a4f-4d06-be3a-ed6005517e4f)
+
+
+### Topic modeling using LDA and LSA
+
+Topic modeling identifies prominent topics, in this case, based on TextBlob as it shows better accuracy. Finding the right number of topics and using an effective text preprocessing technique are critical to achieving topics that are meaningful, well-defined, and easy to understand (Prabhakaran, n.d.).
+
+
+#### Latent Semantic Analysis (LSA)
+
+In LSA, term weights are used which can be positive or negative, where positive values suggest that the terms contribute positively to the representation of the underlying semantic structure of the topic and negative values suggest that the terms contribute negatively. A large positive or negative value indicates a strong correlation. From Figure 13, it is noted that the term “work” has a strong positive correlation, and “screen” has a strong negative correlation in Topic 1.
+
+Figure 13: LSA topic modeling.
+
+![image](https://github.com/user-attachments/assets/a6313d67-0f65-45a6-a3a3-300e055d5adf)
+
+From LSA topics 1-5, positive and negative terms are segregated in Table 11 and related topic names are provided.
+
+Table 11: LSA for topics 1-5 with positive and negative terms.
+
+![image](https://github.com/user-attachments/assets/19615056-37b8-4750-8ff4-e1b62bc062f8)
+![image](https://github.com/user-attachments/assets/b5ce9f9e-443f-4ce8-9e7b-addced9d1b8d)
+
+
+
 
 
 
@@ -317,3 +364,4 @@ Raj
 IBM
 Donges
 Brownlee
+Prabhakaran
