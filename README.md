@@ -254,6 +254,48 @@ The following steps are considered to process TF-IDF: Data cleaning includes tok
 Selecting words with the highest score in TF-IDF allows important terms to be extracted from the document, providing an outline of important topics and obtaining information. Examining scores of TF-IDF for user choices and description of items allows to suggest relevant words by evaluating their similarity. The disadvantages of TF-IDF are the same as BOW.
 
 
+#### Word2Vec
+
+Word2Vec detects the meaning of the terms, unlike BOW and TF-IDF. This is done by mapping words into dense vectors in a continuous vector space, and terms close to one another are considered the same. Word2Vec comprises 2 models: continuous BOW (CBOW) and Skip-gram. CBOW uses the surrounding words to forecast the target word, while Skip-gram, in contrast, operates by predicting the context terms with the target word. Both undergo the following steps: 1. Preprocess the text by tokenization of words, deletion of special characters and punctuations, and transformation of text to lowercase. 2. Create input and output pairs by sliding a fixed window size over the data to predict output data in CBOW, whereas the same process is done but for input data with surrounding words in Skip-gram. 3. Convert input and output terms to one-hot encoded vectors. 4. Construct a neural network with an input layer, which converts one-hot encoded text to dense vectors; hidden layers, which conduct transformations non-linearly; and an output layer, which predicts the target term. 5. Use methods like stochastic gradient descent or Adam optimizer to minimize the difference between estimated and observed target words. 6. Enhance contextual association in the vector space, where the weights of the input layer after training illustrate word embedding (Dube, n.d.).
+
+Word2Vec facilitates the degree of similarity by calculating cosine similarity, which is a similarity between two vectors ranging from completely dissimilar (-1) to completely similar (1), and relationships between words, such as dogs to cats. The usage includes recommendation engines, data retrieval, and query-solving applications. In text categorization and sentiment analysis, Word2Vec embedding shows an improvement in meaningful communication, representing words as continuous vectors and encoding information on meanings. It facilitates linguistic and automated translation by arranging words in foreign languages, allowing to identify the similar words in foreign languages, thereby improving accuracy and context. It collects the resemblances in meaning and interconnections within the context of text, in order to improve the accuracy of recognizing and categorizing named entities in text, namely the name of the person, place, and institutions. It is helpful in clustering related data or extracting meaningful topics to create document-level embedding and to enable efficient methods for text grouping and topic analysis, i.e., analyzing text data, suggesting relevant content, and understanding collections of documents (Gomede, n.d.).
+
+
+
+### ML models
+
+ML models are employed to learn complex language patterns, adapt to diverse context, and continuously improve with information. Unlike previous studies, where most of the articles did not use neural networks, in this research, 5 ML models are taken into account, where 4 are supervised (i.e., interpretability) models (LR, DT, RF, and KNN) and 1 is a neural network for complexity (MLP).
+
+
+#### Logistic Regression
+
+Logistic Regression (LR) is a classification method utilized in supervised ML techniques, in which models are trained using a labeled dataset that has an answer included so the accuracy can be determined. Here, LR is used to solve the binomial prediction, even though there are other types, namely multinomial and ordinal. The outcome of the prediction models has only two values, in this case, either positive or negative, indicating values 1 or 0, respectively. In LR, the sigmoid function is utilized to convert predicted values into probabilities within the range of 0 to 1, showing a positive derivative (Raj, 2020).
+
+When dealing with a large number of categorical values, LR becomes difficult and susceptible to overfitting. Its application is restricted to linear problems, and it performs badly when independent variables show correlation but no correlation with the target value.
+
+
+#### Decision Tree Classifier
+
+A Decision Tree (DT) is a diagram in hierarchical order resembling a flowchart, in which a root node signifies a feature, a branch represents a decision rule, and an individual leaf node corresponds to the final results. The use of Boolean logic and graphical representation enhances understanding. Its ability to work with different data types, such as discrete or continuous values, and its ability to apply thresholds to convert continuous into categorical values and handle null values all demonstrate its adaptability. It is flexible to use both regression and classification tasks. It does not take into account the relationship between features, even though there is a correlation, DT will use only one feature for splitting.
+
+The problem of overfitting and poor generalization can be addressed by pre- and post-pruning to remove subtrees with poor data and to stop the growth of the tree when the data is not sufficient. DT with slightly different data may differ, yet this approach is limited by its tendency to generate highly correlated data. When the decisions are made based on immediate choices but without considering long-term impact, training them will incur higher costs (IBM, n.d.).
+
+
+#### Random Forest Classifier
+
+A Random Forest (RF) Classifier constructs many decision trees and combines their output to achieve a prediction that is both more precise and reliable. By choosing the best feature and from a random subset of features rather than looking for an important feature when splitting a node, it adds additional randomness to the tree growth process by including randomly determined thresholds for individual features, encouraging diversity and producing a better model. It performs well in both regression and classification tasks and offers clear insights into the relative weights assigned to input features due to adaptability. Understanding the hyperparameters is not complex. With a sufficient number of trees, RF avoids overfitting of the model. One major disadvantage is that the RF may become unresponsive or ineffective for real-time predictions when an extensive number of trees are used (Donges, 2023).
+
+
+#### K-Nearest Neighbor Classifier
+
+The K-Nearest Neighbor (KNN) uses a single data point’s proximity to classify or predict how it will be grouped. In order to avoid overfitting or underfitting, it is important to balance the selection of k values. Choosing a lower k value may result in high variance but low bias, whereas a larger k value may produce both high variance and lower bias. Due to its ease and accuracy, the algorithm is easy to implement. It adapts to new training samples by incorporating them into memory, ensuring that adjustments are made to data. KNN needs to specify a k value and choose a distance metric, so it does not require many hyperparameters. The limitation of KNN is that it uses a larger amount of memory and storage of data (IBM, n.d.).
+
+
+#### Multilayer Perceptron
+
+Artificial neural networks, also called Multilayer Perceptron (MP) or neural networks, are a broad field, where perceptron is a model of a neuron that serves as the base for larger neural networks. They are basic computational units with weighted input signals and an activation function to produce an output signal. An activation function is a mapping from the summed weighted input to the output and determines the threshold for neuron activation and the strength of the output signal. The lowest layer, also known as the visible layer, receives input from the dataset. Hidden layers are considered deep due to their previously slow training times; however, in recent years, due to advancements, this layer can be trained fast within seconds. The output layer generates a value or vector of values that are in line with the specifications needed to solve the problem (Brownlee, 2022).
+
+
 
 
 
@@ -269,3 +311,9 @@ Brownlee
 Somarouthu
 Karabiber
 Khetan
+Dube
+Gomede
+Raj
+IBM
+Donges
+Brownlee
