@@ -138,9 +138,120 @@ Table 10: Example for before and after tokenization.
 ![image](https://github.com/user-attachments/assets/dc251718-6f63-430a-937d-6eb44a521d4c)
 
 
+### Exploratory data analysis
+
+To get the hidden trends, patterns, and relationships, exploratory data analysis is utilized where the data can be visualized to gain insights and understand the structure of data.
 
 
+#### Word Cloud
 
+Word Cloud displays the frequently occurring words in a visual format. As shown in Figure 4, larger words, font size, and size variation in the cloud indicate more important or frequently used words, e.g., battery life and brand new. Colors are used to convey different attributes; here, different colors indicate different frequency terms. Words that are close to one another may have associations that point to existing relationships in the text.
+
+Figure 4: Word Cloud based on more number of occurrences.
+
+![image](https://github.com/user-attachments/assets/fdcfe867-6f69-4b58-a382-773c68d90f9a)
+
+
+#### Frequency of ratings
+
+A bar chart is plotted to get the frequency of ratings (categorical variables). Here, rating 5 has the highest frequency distribution of above 10,000 (Figure 5) and rating 2 has the lowest frequency distribution of approximately 1,500, which indicates that most of the reviews are positive.
+
+Figure 5: Bar plot for rating frequency.
+
+![image](https://github.com/user-attachments/assets/b8065e5b-53e3-4f55-9330-1c5373184b89)
+
+
+#### Central tendency and spread of data
+
+Boxplot is used to check for central tendency and spread of the data, i.e., to check where most of the data is lying. In this, the majority of ratings range between 3 and 5, indicating more positive sentiment (Figure 6).
+
+Figure 6: Box plot to check central tendency and spread.
+
+![image](https://github.com/user-attachments/assets/2ab1b684-39ae-40ab-91b6-1072d875525d)
+
+
+#### Frequency of products
+
+A bar graph is also used to determine the frequency of categorical values (product), where Apple iPhone 8 has the highest number of reviews (Figure 7) and Apple iPhone X has the least number of reviews.
+
+Figure 7: Bar graph for frequency distribution of reviewed products.
+
+![image](https://github.com/user-attachments/assets/c18409a5-7410-423f-92a2-ba8102027099)
+
+
+#### Average ratings
+
+The average rating of all products with a number of reviews is displayed in Figure 8, where the majority of products have either 3.5 or 4.5 average ratings, meaning that the range varies from 3 to 5. The colors indicate the number of reviews.
+
+Figure 8: The average rating of all products with reviews.
+
+![image](https://github.com/user-attachments/assets/593edd6a-1919-4779-8d28-ce256baf8313)
+
+
+#### Ratings distribution
+
+Bar plots for all products against each rating for all products are plotted in Figure 9 to get an idea on how each product has been rated, in which iPhone 13 Pro has more number of 1-star ratings, on the other hand, iPhone 8 has the highest 5-star ratings.
+
+Figure 9: Distribution of 1- to 5-star ratings.
+
+![image](https://github.com/user-attachments/assets/cb79de77-6db4-41c5-8bb1-d95cdf36b021)
+
+
+### Sentiment analysis
+
+Sentiment analysis, also known as opinion mining, is the process of identifying and classifying the sentiment as positive, neutral, or negative in a text, where the aim is to map words to emotions, which is already pre-built. It is used to analyze the opinions, emotions, and feelings communicated in text data, such as textual data from social media platforms and customers’ feedback on an e-commerce website. In this work, TextBlob and VADER are used to perform sentiment analysis.
+
+#### TextBlob
+
+TextBlob is one of the lexicon-based methods, where the sentiment is determined by both the strength of individual words and how words provide a certain feeling, by computing sentiment score to analyze positive, neutral, and negative texts. TextBlob provides labels to help in detailed analysis and calculates the polarity and subjectivity scores of the text.
+
+Polarity exists between the range of -1 to 1, where negativity is represented by -1 and positivity is denoted as 1. When negative terms like “not” are used, TextBlob inverts the polarity from positive to negative. The subjectivity score ranges between 0 and 1, where 0 indicates a highly objective phrase (i.e., observable facts) and 1 indicates a highly subjective phrase (i.e., own opinions) (Shah, 2020).
+
+
+#### VADER
+
+Valence Aware Dictionary and Sentiment Reasoner (VADER) is another rule-based approach. In VADER, the compound score is obtained by adding the individual word scores ranging from -4 (majorly negative) to 4 (mostly positive), where -4 is majorly negative sentiment and 4 indicates mostly positive sentiment. Then, it is normalized to the range of -1 to 1, where negativity is implied by -1, neutrality by 0, and positivity by 1 (Calderon, 2017).
+
+
+### Topic Modeling
+
+Topic modeling is used to find the main subjects by identifying patterns and trends, involving the frequency of words and grouping similar words. By using this technique, it is easy to understand what is discussed in each topic. Topic modeling is divided into 2 parts: (i) creating a list of topics to provide a high-level overview of the topic discussed, and (ii) grouping a set of documents based on topics (Pascual, 2019).
+
+
+#### Latent Dirichlet Allocation (LDA)
+
+Latent Dirichlet Allocation (LDA) is built based on the distributional hypothesis, where the same topics use the same terms, and the statistical mixture hypothesis, indicating that documents contain various topics. LDA helps identify what each document is about by connecting it to a group of topics including many words in the document. However, LDA does not consider the arrangement of words and the structure of documents; instead, documents are treated as a collection of individual words.
+
+#### Latent Semantic Analysis (LSA)
+
+Latent Semantic Analysis (LSA) is similar to LDA in following distributional hypothesis, when terms appear together, it indicates that those terms have the same meaning throughout the document. LSA calculates how often terms appear in both a single document and collection, expecting that documents with similar content will display similar frequencies of words. Similar to LDA, LSA has the limitation of finding how words are arranged or the different meanings those terms might have; rather, treating each document as a bunch of separate words.
+
+
+### Feature engineering
+
+Word embedding, a widely used method for representing text-based lexicon, is used to transform words into numerals, and these vectors can be utilized by ML methods for processing. Word embeddings collect the meaning-related aspects of words, which makes machines to easily understand the complexity and meaning of individual words. For example, it uses identical numerical arrays to represent words that frequently occur together in the same document in order to record relationships with words (Shivanandhan, 2023).
+
+
+#### Bag of Words
+
+Text is unstructured when retrieved from a website, but ML prefers structured text; hence, BOW transforms variable-length texts into fixed-length numbers using CountVectorizer and it focuses on the frequencies of words rather than their specific location and English grammar rules (Figure 10). It consists of 2 components: a list of well-known terms, and an evaluation of the occurrences of those well-known terms. The limitations include creating a scoring system for the existence of these known words and designing the list of recognized tokens (Brownlee, 2019).
+
+Figure 10: Illustration for Bag of Words. From (Somarouthu, 2023).
+
+![image](https://github.com/user-attachments/assets/2d799c8f-ebd6-495c-95e5-803dddf4ead9)
+
+In BOW, the data cleaning processes take place involve the elimination of stopwords, emoticons, numerals, punctuation marks, and white spaces and the conversion of text to lowercase. Then, a number of occurrences of each value are calculated. Finally, vectorization makes a list where each word represents a different word in a group of documents and the number of each word displays the number of times the word appears in the text.
+
+The limitations of BOW are as follows: understanding content and relationships is challenging since words that have identical meanings can be interpreted as having entirely different meanings; BOW does not consider the meaning and sense of words. In a collection of text, there are many different words, creating lengthy but sparser arrays, thereby making the system work less efficiently (Somarouthu, 2023).
+
+
+#### TF-IDF
+
+Term Frequency-Inverse Document Frequency (TF-IDF), a widely used statistical analysis for the extraction of information, evaluates a term’s weightage in a document with regard to a collection of documents. The text vectorization method assigns numerical values representing weightage to terms within a document. TF is the ratio of the number of times the term appears in the document to the total number of words in that document. IDF is the ratio of the logarithmic value ratio of the number of documents in the collection of documents to the number of documents in the group with the word. The product of TF and IDF forms the TF-IDF (Karabiber, n.d.).
+
+The following steps are considered to process TF-IDF: Data cleaning includes tokenizing, deleting punctuation and special characters, transforming to lowercase, and removing stopwords. Enhancing the scores of TF-IDF by customizing the stopword list to remove terms related to task and industry ensures that important and appropriate terms are considered. By standardizing the scores to be on the same scale, scaling scores in the interval is helpful for greater understanding and evaluation. Fine-tuning parameters include adjusting components namely n-gram handling or weighting schemes; investigating these changes leads to better results customized for particular tasks (Khetan, 2023).
+
+Selecting words with the highest score in TF-IDF allows important terms to be extracted from the document, providing an outline of important topics and obtaining information. Examining scores of TF-IDF for user choices and description of items allows to suggest relevant words by evaluating their similarity. The disadvantages of TF-IDF are the same as BOW.
 
 
 
@@ -151,3 +262,10 @@ Table 10: Example for before and after tokenization.
 
 
 Breuss
+Shah
+Pascual
+Shivanandhan
+Brownlee
+Somarouthu
+Karabiber
+Khetan
