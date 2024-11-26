@@ -339,6 +339,7 @@ From LSA topics 1-5, positive and negative terms are segregated in Table 11 and 
 Table 11: LSA for topics 1-5 with positive and negative terms.
 
 ![image](https://github.com/user-attachments/assets/19615056-37b8-4750-8ff4-e1b62bc062f8)
+![image](https://github.com/user-attachments/assets/53ef05c2-8130-4baf-b590-3c3429e402f0)
 ![image](https://github.com/user-attachments/assets/b5ce9f9e-443f-4ce8-9e7b-addced9d1b8d)
 
 
