@@ -418,27 +418,51 @@ Here, the topic is selected based on the condition of how the consumers received
 To conclude, positive sentiments are based on features, life, and quality and satisfaction, whereas negative sentiments are regarding concerns related to customer service interaction, product replacement, battery longevity, user dissatisfaction, and physical condition. Although most of the terms are identified correctly in positive and negative topics, terms such as replace and refurbish are given in positive terms and words like good and perfect are in negative aspects, proving that this is not a reliable method. In order to enhance further, coherence score and perplexity can be computed to get more meaningful insights about each topic.
 
 
+### Proposing a hybrid method for enhanced sentiment analysis
+
+In most of the studies, lexicon-based approaches and ML-based approaches are used separately. To get better results, in this work, both approaches are used. Here, TextBlob is considered for further process as it has achieved the highest accuracy of 76.5% compared to VADER. The output of TextBlob is given as the target variable for the ML models, instead of Ratings as suggested in other studies. This hybrid approach is proposed for accurate and effective sentiment analysis of Amazon reviews. 
 
 
+### Performance analysis of ML models with TextBlob sentiments
+
+The classification results of 5 learning models with TextBlob combined with text normalization techniques produce 15 models. Experimental results of extracted sentiments from TextBlob demonstrate that the proposed hybrid feature engineering approach performs better on average. Table 14 shows that the accuracy of MLP with BOW is the highest with 97.97%.
+
+Table 14: Performance of ML models with 3 feature engineering techniques in TextBlob.
+
+![image](https://github.com/user-attachments/assets/eda1281e-35bd-4bf9-b6b6-706e44ea7796)
+![image](https://github.com/user-attachments/assets/969b811f-7bbd-434a-97bb-42950ad2e0e5)
+
+Confusion matrix is used to evaluate the performance of classification tasks. It consists of 4 components: (i) True Positives (TP), instances which are correctly identified as positive; (ii) True Negatives (TN), instances which are correctly identified as negative; (iii) False Positives (FP), instances which are incorrectly identified as positive; and (iv) False Negatives (FN), instances which are incorrectly identified as negative. In Figure 15, MLP, which has the highest accuracy, identifies 2929 instances as TP and 761 as TN; however, it showed 28 instances as FP and 37 as FN.
+
+Figure 15: Confusion matrix of BOW for MLP model.
+
+![image](https://github.com/user-attachments/assets/e43df821-b05b-4b10-93d0-bccc4274c966)
 
 
+## Conclusions
+
+This study addresses the problem in other studies on the sentiment analysis of the Amazon website by using a hybrid approach of combining rule- and ML-based approaches for labeling and classification, respectively, where the input of ML is the output of TextBlob, despite using Ratings as others suggested. The Amazon reviews on iPhone are webscraped using Beautiful Soup. The sentiment analysis is evaluated by TextBlob and VADER; the effectiveness of TextBlob and VADER is annotated, where TextBlob (accuracy: 76.5%) outperforms VADER (accuracy: 66.51%). For feature engineering, BOW, TF-IDF, and Word2Vec are used. Five ML models, namely LR, DT, RF, KNN, and MLP, are employed. Results suggest that the MLP with BOW has achieved the highest accuracy of 97.97%.
+
+Topic modeling, an unsupervised model, is performed using LSA and LDA, where in overall, users express positive sentiments on features but negative sentiments on purchase, screen, and service. However, it does not always provide the correct terms related to specific topics.
+
+Despite all these, there are limitations to this work: (1) only Amazon iPhone reviews are taken into consideration; (2) the foreign language reviews are removed; if translated, it would have given more insights; (3) the issue of imbalanced data, with a greater number of positive reviews, could have been addressed; and (4) slang and sarcasm are not accounted for. Future works may intend to identify negation terms and sarcasm; in topic modeling, calculating coherence score and perplexity can improve the interpretable themes. 
 
 
+## References
 
-
-
-Breuss
-Shah
-Pascual
-Shivanandhan
-Brownlee
-Somarouthu
-Karabiber
-Khetan
-Dube
-Gomede
-Raj
-IBM
-Donges
-Brownlee
-Prabhakaran
+Breuss, M. (2021). BeautifulSoup: Build a web scraper with Python. https://realpython.com/beautiful-soup-web-scraper-python/
+Brownlee, J. (2019). A gentle introduction to the Bag-of-Words model. https://machinelearningmastery.com/gentle-introduction-bag-words-model/
+Brownlee, J. (2022). Crash course on multi-layer perceptron neural networks. https://machinelearningmastery.com/neural-networks-crash-course/
+Donges, N. (2023). Random forest: a complete guide for machine learning. https://builtin.com/data-science/random-forest-algorithm
+Dube, A. (n.d.). Word2Vec, Skip-gram, & CBOW. https://medium.com/@dube.aditya8/word2vec-skip-gram-cbow-b5e802b00390
+Gomede, E. (n.d.). Word2Vec: Unlocking semantic power through word embeddings. https://medium.com/@evertongomede/word2vec-unlocking-semantic-power-through-word-embeddings-690df7e7b67d
+IBM. (n.d.). What is a decision tree? https://www.ibm.com/topics/decision-trees
+IBM. (n.d.). What is the k-nearest neighbors algorithm? https://www.ibm.com/topics/knn#:~:text=The%20k%2Dnearest%20neighbors%20algorithm%2C%20also%20known%20as%20KNN%20or,of%20an%20individual%20data%20point.
+Karabiber, F. (n.d.). TF-IDF: Term Frequency-Inverse Document Frequency. https://www.learndatasci.com/glossary/tf-idf-term-frequency-inverse-document-frequency/#:~:text=Using%20scikit%2Dlearn-,What%20is%20TF%2DIDF%3F,%2C%20relative%20to%20a%20corpus).
+Khetan, J. (2023). A practical guide to TF-IDF and Term-Frequency in text analysis. https://medium.com/@jyotikhetan2/a-practical-guide-to-tf-idf-and-term-frequency-in-text-analysis-b332c0405639
+Pascual, F. (2019). Topic modeling: An introduction. https://monkeylearn.com/blog/introduction-to-topic-modeling/
+Raj, A. (2020). Perfect recipe for classification using logistic regression. https://towardsdatascience.com/the-perfect-recipe-for-classification-using-logistic-regression-f8648e267592
+Prabhakaran, S. (n.d.). Topic modeling with Gensim (Python). https://www.machinelearningplus.com/nlp/topic-modeling-gensim-python/
+Shah, P. (2020). Sentiment analysis using TextBlob. https://towardsdatascience.com/my-absolute-go-to-for-sentiment-analysis-textblob-3ac3a11d524
+Shivanandhan, M. (2023). Understanding word embeddings: The building blocks of NLP and GPTs. https://www.freecodecamp.org/news/understanding-word-embeddings-the-building-blocks-of-nlp-and-gpts/
+Somarouthu, S. P. C. (2023). Unlocking text analysis: BoW, TF-IDF, and Word2Vec compared. https://medium.com/@sspchakravarthy/unlocking-text-analysis-bow-tf-idf-and-word2vec-compared-e1624b004743
